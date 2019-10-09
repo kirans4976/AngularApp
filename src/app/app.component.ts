@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularApp';
+  //title = 'AngularApp';
+  //show : boolean = false;
+  
+  imgUrl="https://static.javatpoint.com/tutorial/angular7/images/angular-7-logo.png";
+  isDisabled=true;
+  
 }

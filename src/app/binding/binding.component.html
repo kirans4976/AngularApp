@@ -1,0 +1,26 @@
+<p>binding works!</p>
+<!--Template reference variables-->
+<input #myInput type="text" />
+<button (click)=LogMessage(myInput.value)>Log</button>
+
+
+<!--If we use both html class & property binding then property binding will work-->
+<h2 class="text-success">class binding</h2>
+<h2 [class]="successClass">class binding</h2>
+<!--based on boolean value class applies, this works for single class-->
+<h2 [class.text-danger]="hasError">class binding</h2>
+<h4 [ngClass]="MessageText">class binding</h4>
+<!--[style.color]="hasError ? red: green"-->
+<!-- <h4 [style.color]="''orange''">style binding</h4> -->
+
+
+<h4 [ngStyle]="StyleBinding">style binding</h4>
+
+
+<!--Click event can be assigned to template statement 
+(click) = "greeting='Welcome to anguler'"
+{{greeting}}
+
+.ts:
+public greeting = "";
+-->

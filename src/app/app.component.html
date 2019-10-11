@@ -8,3 +8,6 @@
 <input type="button" [disabled]="isDisabled" value="Submit" />
 <!-- app-directives component wii be bind -->
 <app-directives></app-directives>
+<app-binding></app-binding>
+<app-component-interaction (childEvent)="message=$event" [parentData]=" 'Kiran' "></app-component-interaction>
+<h1>{{message}}</h1>

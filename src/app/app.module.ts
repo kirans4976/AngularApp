@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { DirectivesComponent } from './directives/directives.component';
 
 import {FormsModule} from '@angular/forms'; //for using  ngModel in app-directives component
+import { BindingComponent } from './binding/binding.component';
+import { ComponentInteractionComponent } from './component-interaction/component-interaction.component'; //for using  ngModel in app-directives component
 
 @NgModule({
   declarations: [
     AppComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    BindingComponent,
+    ComponentInteractionComponent
   ],
   imports: [
     BrowserModule,

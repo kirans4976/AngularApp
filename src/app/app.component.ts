@@ -11,5 +11,5 @@ export class AppComponent {
   
   imgUrl="https://static.javatpoint.com/tutorial/angular7/images/angular-7-logo.png";
   isDisabled=true;
-  
+  public message = "";
 }

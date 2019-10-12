@@ -6,8 +6,16 @@
 </div>
 
 <input type="button" [disabled]="isDisabled" value="Submit" />
+<nav>
+    <a routerLink="/directives" routerLinkActive="active">Directives</a><br>
+    <a routerLink="/bindings" routerLinkActive="active">Bindings</a>
+</nav>
+
 <!-- app-directives component wii be bind -->
-<app-directives></app-directives>
-<app-binding></app-binding>
+<!-- <app-directives></app-directives>
+<app-binding></app-binding> -->
+
+<!--Routed views go here-->
+<router-outlet></router-outlet>
 <app-component-interaction (childEvent)="message=$event" [parentData]=" 'Kiran' "></app-component-interaction>
 <h1>{{message}}</h1>

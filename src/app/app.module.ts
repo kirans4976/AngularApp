@@ -1,22 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DirectivesComponent } from './directives/directives.component';
+//import { DirectivesComponent } from './directives/directives.component';
 
 import {FormsModule} from '@angular/forms'; //for using  ngModel in app-directives component
-import { BindingComponent } from './binding/binding.component';
+//import { BindingComponent } from './binding/binding.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component'; //for using  ngModel in app-directives component
 import {EmployeeServicesService} from './Services/employee-services.service';
 import {HttpClientModule} from '@angular/common/http';
+//import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DirectivesComponent,
-    BindingComponent,
+    routingComponents, // instead of  importing binding & directives components, we will bind routingComponents const
     ComponentInteractionComponent
   ],
   imports: [

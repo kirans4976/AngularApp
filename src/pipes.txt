@@ -1,0 +1,25 @@
+Pipes tyes:
+
+The pipe operator transform the data only for the view, it doesn't changes the value of the property
+in the class
+for string property:
+lowercase
+uppercase
+titlecase
+Slice 3:5 >>  starting & limiting
+json >> gives json representation of object
+
+for numbers:
+
+number: '1.2-3' >> minimum in interger place. min digits in decimal palce-maximum after decimal place
+percent 
+currency default is us dollars
+currency : 'GBP':'code' >> country as an argument,look into iso curreny codes, code 
+will dispaly the curreny code
+
+date format:
+date:'short' >> displays both date & time
+date:'shortTime' >> displays only time
+date:'shortDate' >> displays only date
+
+similar to shortformat , there is also medium & long

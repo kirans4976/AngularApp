@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeServicesService } from '../Services/employee-services.service';
 
 
 @Component({
@@ -8,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
-  
-  constructor() { }
+  public employees =[];
+  constructor(private _employeeService:EmployeeServicesService) { }
 
   ngOnInit() {
+this.employees =  this._employeeService.getEmployees();
   }
   show : boolean = false;// decalring variable which is used in .html file
   title: string ="Top 10 Movies" ;  

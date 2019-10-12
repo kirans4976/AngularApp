@@ -1,0 +1,84 @@
+start writing the code for angular services without diving deep into dependency 
+injection but as always I want to help you get a better understanding of the code
+ that you write and maintained so we are going to learn
+
+ code doesn't use di
+ Di as design pattern
+ di as framework
+
+ class car
+ {
+     engine;
+     tyres;
+
+     constructor()
+     {
+         this.engine = new engine();
+         this.tyres = new tyres();
+     }
+ }
+
+ class engine 
+ {
+     constructor();
+ }
+  class Tyres 
+ {
+     constructor();
+ }
+
+ when there is change in child class , there is need to change in parent class
+ ex: enging type as params
+
+ 2.not suitable for testing: any time u instanciated the new car , u will get same set of engine & tyres
+ even if u have change in code, what u will do if enging & tyres have some dependencies
+ how do u keep track and create those dependencies
+
+ this is where di as design patten will helps us 
+
+
+ Di design pattern:
+
+
+basically dependency injection is a coding pattern in which class receives its
+ dependencies from external sources rather than creating them itself 
+ 
+
+
+ class car 
+ {
+     engine;
+     tyres;
+     constructor(engine,tyres)
+     {
+         this.engine = engine;
+         this.tyres = tyres;
+     }
+ }
+
+ creating car :
+ var myEngine = new engine(); // if param is new req, we will pass param here
+ var myTypre = new Tyre(); // if param is new req, we will pass param here
+ var myCar = new Car(myEngine,myTypre);
+
+ if we made changes in dependencies, the car class will remain constant
+
+ similarly testing , we can pass the set of testing params
+
+ we wil have a proplem when more no of dependencies are there , we will need to craete all those
+ dependencies before we will passing them
+and what if those dependencies will have in have dependencies inetrnallly
+
+for that we will use di as framework
+
+Di as framework has something called injector with you register all your dependencies
+ injector is basically like a container of all the dependencies like engines, tyres 
+ dependency a ,b and so on if you want a car and the injector will
+  provide a car for you the framework will manage all the dependencies so that
+you don't have to keep track of it I think that makes the developer job that
+ much more easier 
+
+ 1.define the employee service class >> contains emp data
+ 2.register with injector
+ 3.declare as dependency in empList & EmpDetail
+

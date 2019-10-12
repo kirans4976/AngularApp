@@ -95,3 +95,10 @@ syntax:
     <div *ngSwitchCase="'Two'">Two is Selected</div>
     <div *ngSwitchDefault>Default Option</div>
 </div>
+
+
+<!--Employee Service Binding-->
+
+<div *ngFor="let employee of employees">
+    {{employee.name}},{{employee.id}},{{employee.age}}
+</div>

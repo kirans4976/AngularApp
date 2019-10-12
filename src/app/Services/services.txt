@@ -1,0 +1,41 @@
+services: why to unordered_list
+
+ex:
+employee object data must be displayed in view employee-make_list
+
+we create a employee object in array of employee-list comp & bind the dat in view
+
+change req:
+employee data must be displayed from another view employee-detail comp
+
+we bind the employee data in employee-detail view & employee data is not available in the employee-deatil comp
+so we copy the employee data from emp-list to emp-detail component and the binding works
+
+here we are violating some principles:
+
+1.Do not repeat yourself(dry) >> the emp-data must not be repeated
+2. Single Responsibility principles >> the component class must have only 1 Responsibility that is to control views logic
+
+
+here 
+but in case it is also responsible for creating the data which is the employee 
+having a better solution and that solution is a service 
+
+something you learned from the example need to share data across multiple components 
+that are  responsible for providing the data to the components 
+
+reusable logic ex: age calc by dob across the components
+
+finally we can also used services for external interactions such as connecting to a database 
+
+service:
+A class with specific purpose
+1. share data
+2. Implement application logic
+3. External Interaction
+
+naming convention - .service.ts 
+
+
+
+

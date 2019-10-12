@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeServicesService } from '../Services/employee-services.service';
 
 @Component({
   selector: 'app-binding',
@@ -8,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingComponent implements OnInit {
 
-  constructor() { }
+  public employees=[];
+
+  ngOnInit(){
+// to fetch the data from service we will use ngOnint life cycle hook 
+    this.employees = this._employeeService.getEmployees();
+  }
+  constructor(private _employeeService:EmployeeServicesService) { }
 
   public successClass = "text-success";
   public hasError = true;

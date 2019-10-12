@@ -10,6 +10,8 @@ import {FormsModule} from '@angular/forms'; //for using  ngModel in app-directiv
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component'; //for using  ngModel in app-directives component
 import {EmployeeServicesService} from './Services/employee-services.service';
 import {HttpClientModule} from '@angular/common/http';
+// import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+// import { DepartmentListComponent } from './department-list/department-list.component';
 //import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 

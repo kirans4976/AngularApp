@@ -1,4 +1,10 @@
 import { Injectable } from '@angular/core';
+//import { HttpClient } from 'selenium-webdriver/http';
+import { IEmployee } from '../employee';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import  {catchError} from 'rxjs/operators';
+import {throwError} from 'rxjs';
 
 /*when u dont register service with injector it is just class for angular
 there are multiple places u can register a service but is imp because
@@ -23,14 +29,27 @@ hence it is not must, for class we must have component decorator & for service w
 })
 export class EmployeeServicesService {
 
-  constructor() { }
+
+  private _url:string = "/assets/employee.json"; // here error can be raised
+  constructor(private http:HttpClient) { 
+
+
+  }
   // this service class is binding in binding & directives component
-  getEmployees(){
-    return [
-      {"id":1,"name":"Andrew","age":30},
-      {"id":2,"name":"Kiran","age":25},
-      {"id":3,"name":"pavan","age":27},
-      {"id":4,"name":"venkat","age":26}
-    ];
+  getEmployees():Observable<IEmployee[]>{
+    // return [
+    //   {"id":1,"name":"Andrew","age":30},
+    //   {"id":2,"name":"Kiran","age":25},
+    //   {"id":3,"name":"pavan","age":27},
+    //   {"id":4,"name":"venkat","age":26}
+    // ];
+
+    return this.http.get<IEmployee[]>(this._url).pipe(
+    catchError(this.handlerError));
+  }
+
+  handlerError(error:HttpErrorResponse)
+  {
+    return throwError(error.message || "ServerError");
   }
 }

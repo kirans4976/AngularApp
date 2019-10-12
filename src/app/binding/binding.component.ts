@@ -10,10 +10,12 @@ import { EmployeeServicesService } from '../Services/employee-services.service';
 export class BindingComponent implements OnInit {
 
   public employees=[];
-
+public errorMsg;
   ngOnInit(){
 // to fetch the data from service we will use ngOnint life cycle hook 
-    this.employees = this._employeeService.getEmployees();
+    //this.employees = this._employeeService.getEmployees();
+    this._employeeService.getEmployees().subscribe(data => this.employees = data
+      , error => this.errorMsg = error);
   }
   constructor(private _employeeService:EmployeeServicesService) { }
 

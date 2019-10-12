@@ -1,0 +1,38 @@
+we will use http request for sending request and we get http responce
+
+as an observable and we need cast observable as an array of employees
+
+newspaper ex:
+
+newspaper company send req to source fro geeting data,after getting data it modifies to specific
+format and send to the houses that only subscribered the newspaper
+
+Observables:
+
+A sequence of items that arrive asynchronously over time
+Http call - single items
+single item - http responce
+
+here http call is single item, in angular observables is an single item that arrives asynvhronously
+as we receive responce as an observable, it is not suitable for using readly, hence we need to convert
+the observable into employee array & provide the data to the subscribered components to the employee service
+
+http observable & RXjs 
+
+1.http get request  from emp service
+2.receive the observable & cast it into an employee  array
+3.subscribe to the observable to the employeelist & empdetail
+4.assign the emp to the local variable 
+RXJS:
+reactive extensions for js
+external library to work with observables
+
+angular 5 has httpclient instead of httpModule
+add httpClentModule in imprts od appmodule & we doesn't add httpservice in providers because
+httpclientModule will take care of this
+
+
+
+
+
+

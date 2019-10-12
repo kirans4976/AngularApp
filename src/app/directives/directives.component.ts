@@ -11,9 +11,12 @@ export class DirectivesComponent implements OnInit {
 
   public employees =[];
   constructor(private _employeeService:EmployeeServicesService) { }
-
+  public errorMsg;
   ngOnInit() {
-this.employees =  this._employeeService.getEmployees();
+  //this.employees =  this._employeeService.getEmployees();
+   this._employeeService.getEmployees().subscribe(data => this.employees = data
+    , error => this.errorMsg = error
+    );
   }
   show : boolean = false;// decalring variable which is used in .html file
   title: string ="Top 10 Movies" ;  

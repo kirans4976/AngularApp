@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms'; //for using  ngModel in app-directiv
 import { BindingComponent } from './binding/binding.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component'; //for using  ngModel in app-directives component
 import {EmployeeServicesService} from './Services/employee-services.service';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [

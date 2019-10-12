@@ -22,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [EmployeeServicesService],
   /*AppModule, which looks into the app folders. You can see in the "app.module" file 

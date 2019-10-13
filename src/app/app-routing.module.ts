@@ -14,8 +14,10 @@ const routes: Routes = [
   //{path:'',component:DirectivesComponent},
   {path:'',redirectTo:'/directives',pathMatch:'full'}, // pathMatch:prefix
    { path:'directives',component:DirectivesComponent },
-   {path:'departments',component:DepartmentListComponent},
-   {path:'departments/:id',component:DepartmentDetailComponent},
+   /*if we change below route from departments to departments-list then it must be changes in all
+   occurances, because this is absolute path , hence we will change to navigate routing */
+   {path:'departments-list',component:DepartmentListComponent},
+   {path:'departments-list/:id',component:DepartmentDetailComponent},
   {path: 'bindings',component:BindingComponent},
   {path:'**',component:PageNotFoundComponent}
 ];

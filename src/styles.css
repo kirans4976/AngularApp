@@ -3,3 +3,7 @@
 nav a.active {
     color: aqua;
 }
+
+.items li.selected {
+    color: red;
+}

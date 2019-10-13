@@ -2,6 +2,12 @@
 
 <h4>you have selected department id {{departmentId}}</h4>
 
+<!--for child routing-->
+<router-outlet></router-outlet>
+<p>
+    <button (click)="showOverview()">OverView</button>
+    <button (click)="showContact()">Contact</button>
+</p>
 <a (click)="goPrevious()">Previous</a>
 <div></div>
 <a (click)="goNext()">Next</a>

@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms'; //for using  ngModel in app-directiv
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component'; //for using  ngModel in app-directives component
 import {EmployeeServicesService} from './Services/employee-services.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AngFormsComponent } from './ang-forms/ang-forms.component';
 // import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 // import { DepartmentContactComponent } from './department-contact/department-contact.component';
 // import { DepartmentDetailComponent } from './department-detail/department-detail.component';
@@ -21,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     routingComponents, // instead of  importing binding & directives components, we will bind routingComponents const
-    ComponentInteractionComponent
+    ComponentInteractionComponent, AngFormsComponent
   ],
   imports: [
     BrowserModule,

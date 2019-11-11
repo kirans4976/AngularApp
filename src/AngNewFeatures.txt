@@ -1,0 +1,88 @@
+30.Ang 6 new Features & changes:
+
+Ang6 depends upon RXJS6
+material,cli,gramework >> 6.0
+
+Animations: @angular/animations, earlier : /core
+
+<ng-template> >> 6.0
+
+Registering providers:
+
+@injectable 
+{
+	providerIN:'root'
+}
+
+earlier:
+
+providers: [EmpService]
+
+ngModel change event
+
+onchange(ngModel: ngModel)
+{
+c.log(ng.model.value) // will log updated value
+}
+
+AngCli: 6.0:
+ng update <package>
+
+ng add : ng add @angular/material
+
+CLI+Material starter Templates: 3 Templates
+
+material side nav
+dashboard
+data-table
+
+cli: supports multiple projrcts
+supports ang.json  instead of ang-cli.json
+
+Ang Elements: use  ang component in other apps with litte Angular
+Ivy: next gen rendering engine, Inc speed & decs size
+
+
+----------------------------------------------------  32.Ang  new features:  ----------------------------------------------------------------------------------------
+
+32.Ang  new features:
+
+Ang mat, cli, framework: 8
+
+differential loading: Apps are more performant
+
+Built an app for production >> 2 bundles are created for es6 & es 5
+bundle sixe : 7-20% reduce
+ng build --prod
+
+Dynamic imports for lazy routes:
+load the code for the routes only when user naviate to these routes for the 1st time
+
+syntax change: dynamic import syntax
+ng upgrade
+
+ivy rendering enginge 
+translating templates & components to html & js
+not stable - can opt in
+ng new demo - to enable ivy
+generates less bundles
+
+Bazel: build tool, experimental tool
+
+breaking changes: typescript 3.4. node 12/later
+
+httpclientModule to httpModule
+httpclientService to httpservice
+
+view child & content child syntax change:
+
+@voewchild('foo',{static:false}) foo:elementref;
+update.angular.io
+TC while ////
+Ang comp Interraction: view child decorator
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------

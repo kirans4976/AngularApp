@@ -1,0 +1,43 @@
+
+Angular forms:
+
+Forms: vital to business application
+
+create an experience that guides the user very effectively & efficiently through out the work flow
+
+develops: data binding, change tracking, validation, visual feedback, error msgs, form submission
+
+prerequisites:
+html,css, js, Ang-Templates,components,databinding & services
+
+concept:
+
+
+componentTemplate
+colloect data html >> class data >> service data >> server
+
+Template driven forms  reactive form/model driven form
+
+TDF:
+2 way data binding with ng model -heavily depend on bulky html & min on components
+ng form >> tracks the form elements state & validity
+unittesting is a challlenging for form validate , end to end testing with browser
+readablity decreases for complex forms & validation(as we incs validation readablity decs)
+
+If we want simple form, for which browser can handle unittesting go with TDF
+
+
+TDF:
+-Generate cli project
+-Add the form html
+-Binding data
+-tracking states and validation
+-providing visual feedback
+-Displaying error msgs
+-posting data to the server(by express server)
+
+
+setting up new project
+Index.html >> add bootstrap
+
+Adding form html: Bootcamp enrollment form

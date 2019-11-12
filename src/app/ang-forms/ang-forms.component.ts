@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-ang-forms',
@@ -12,4 +13,9 @@ export class AngFormsComponent implements OnInit {
   ngOnInit() {
   }
   topics = ['Angualar','React','Vue'];
+
+  userModel= new User('Rob','rob@user.com',55555,'','morning',true);
+  // for bind the userModel data to the Form
+
+  
 }

@@ -13,8 +13,9 @@
         <div class="form-group">
             <label>Name</label>
             <!-- proprty data binding 1 way dbinding[]  [ngModel]="userModel.name"-->
-            <input type="text" class="form-control" name="userName" [(ngModel)]="userModel.name">
+            <input type="text" class="form-control" #name #nameModel="ngModel" required name="userName" [(ngModel)]="userModel.name">
         </div>
+        {{name.className}} {{nameModel.untouched}}
         <!-- <div ngModelGroup="address">
             <div class="form-group">
                 <label>street</label>

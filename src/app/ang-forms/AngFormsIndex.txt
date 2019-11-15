@@ -1,0 +1,27 @@
+1.Angular Forms-Introduction
+2.Template driven Forms
+3.Setting up new project
+4. Adding Form html
+5.Binding data with ngForm
+6.Binding Data to a ngModel
+7.Tracking state & validity
+8.Validation with visual feedback
+
+7.Tracking state & validity:
+1.The control has visited >> ng-toched(cliking or tabbing form)   >> ng-untoched
+the class will change only on blur, u have to navigate away from form
+2.The control's value has changed  ng-dirty >> ng-pristine
+3.The controls value is valid >> ng-valid >> ng-Invalid
+
+Angular provides alternative in ngModel props
+
+class           property
+ng-untoched     untouched   
+ng-touched      touched
+ng-pristine     pristine
+ng-dirty        dirty
+ng-valid        valid
+ng-Invalid      Invalid 
+
+#name= "ngModel" >> points to reference of ngModel props
+

@@ -6,6 +6,8 @@
 6.Binding Data to a ngModel
 7.Tracking state & validity
 8.Validation with visual feedback
+9.Displaying Error msgs
+10.select control validation
 
 7.Tracking state & validity:
 1.The control has visited >> ng-toched(cliking or tabbing form)   >> ng-untoched
@@ -23,5 +25,5 @@ ng-dirty        dirty
 ng-valid        valid
 ng-Invalid      Invalid 
 
-#name= "ngModel" >> points to reference of ngModel props
+
 

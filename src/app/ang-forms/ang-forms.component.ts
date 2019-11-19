@@ -13,9 +13,24 @@ export class AngFormsComponent implements OnInit {
   ngOnInit() {
   }
   topics = ['Angualar','React','Vue'];
+  topicHasError=true;
 
+
+// for bind the userModel data to the Form
   userModel= new User('Rob','rob@user.com',55555,'','morning',true);
-  // for bind the userModel data to the Form
+  
+  validateTopic(value)
+  { 
+    if(value === 'default')
+    {
+      this.topicHasError = true;
+    }
+    else{
+      this.topicHasError = false; 
+    }
+
+  }
+  
 
   
 }

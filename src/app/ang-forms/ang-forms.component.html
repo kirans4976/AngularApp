@@ -10,15 +10,17 @@
     <!-- If ngModel is used within a form tag, either the name attribute must be set or the form
       control must be defined as 'standalone' in ngModelOptions.
  -->
-    <form #userForm="ngForm"> {{userForm.value| json}}
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate> {{userForm.value| json}}
         <hr/> {{userModel | json}}
+        <!-- for validating form -->
+        {{userForm.form.valid}}
         <div class="form-group">
             <label>Name</label>
             <!-- proprty data binding 1 way dbinding[]  [ngModel]="userModel.name" 
             currenyly class.invalid is not working
             pattern="^\d{10}$" for phone pattern validation -->
             <input type="text" [class.is-invalid]="name.invalid && name.touched" class="form-control" #name #nameModel="ngModel" required name="ngModel" [(ngModel)]="userModel.name">
-            <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
+            <!-- <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small> -->
 
 
         </div>
@@ -82,5 +84,6 @@
         </div>
     </form>
 
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <!-- for custom validation, u can handle in click event -->
+    <button class="btn btn-primary" [disabled]="userForm.form.invalid" type="submit" (click)="onSubmit()">Submit form</button>
 </div>

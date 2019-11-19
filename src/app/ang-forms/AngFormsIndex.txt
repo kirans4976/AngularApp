@@ -8,6 +8,9 @@
 8.Validation with visual feedback
 9.Displaying Error msgs
 10.select control validation
+11.Form validation
+12.Submitting form data
+13.Express server to receive form data
 
 7.Tracking state & validity:
 1.The control has visited >> ng-toched(cliking or tabbing form)   >> ng-untoched

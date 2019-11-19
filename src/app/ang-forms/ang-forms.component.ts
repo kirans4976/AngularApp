@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { EnrollmentService } from './enrollment.service';
+
 
 @Component({
   selector: 'app-ang-forms',
@@ -8,7 +10,7 @@ import { User } from '../user';
 })
 export class AngFormsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _enrollmentService:EnrollmentService) { }
 
   ngOnInit() {
   }
@@ -30,7 +32,12 @@ export class AngFormsComponent implements OnInit {
     }
 
   }
-  
 
-  
+  onSubmit(){
+    debugger
+    this._enrollmentService.enroll(this.userModel)
+    .subscribe(data=> console.log('success',data),
+    err=> console.log('Error',err))
+    console.log(this.userModel); 
+  }  
 }

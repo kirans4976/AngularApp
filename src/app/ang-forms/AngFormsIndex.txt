@@ -29,4 +29,12 @@ ng-valid        valid
 ng-Invalid      Invalid 
 
 
+13:
+npm --yes init for package.json
+npm install
+ --save express body-parser controls
+express is webserver
+body-parser is middle ware for handling form data
+cors i package to make   requets across different ports
+
 

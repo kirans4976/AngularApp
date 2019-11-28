@@ -10,7 +10,9 @@
     <!-- If ngModel is used within a form tag, either the name attribute must be set or the form
       control must be defined as 'standalone' in ngModelOptions.
  -->
-    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate> {{userForm.value| json}}
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <!-- *ngIf="!isSubmitted" errors(cannot read property form of undefined) -->
+        {{userForm.value| json}}
         <hr/> {{userModel | json}}
         <!-- for validating form -->
         {{userForm.form.valid}}

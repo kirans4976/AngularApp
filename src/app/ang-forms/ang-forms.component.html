@@ -4,7 +4,9 @@
 
 <div class="container-fluid">
     <h1>Bootcamp Enrollment form</h1>
-
+    <div class="alert alert-danger" *ngIf='errorMsg'>
+        {{errorMsg}}
+    </div>
     <!-- ngModel for tracking form elements & name prop must be there if we use ngModel
 #name= "ngModel" >> points to reference of ngModel props -->
     <!-- If ngModel is used within a form tag, either the name attribute must be set or the form

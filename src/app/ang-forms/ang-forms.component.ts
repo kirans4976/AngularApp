@@ -17,6 +17,7 @@ export class AngFormsComponent implements OnInit {
   topics = ['Angualar','React','Vue'];
   topicHasError=true;
   isSubmitted= false;
+  errorMsg = '';
 
 
 // for bind the userModel data to the Form
@@ -39,7 +40,8 @@ export class AngFormsComponent implements OnInit {
     this.isSubmitted = true;
     this._enrollmentService.enroll(this.userModel)
     .subscribe(data=> console.log('success',data),
-    err=> console.log('Error',err))
-    console.log(this.userModel); 
+    //err=> console.log('Error',err))
+    err=>this.errorMsg=err.statusText)
+    //console.log(this.userModel); 
   }  
 }

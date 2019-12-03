@@ -16,7 +16,8 @@ app.get('/', function(req, res) {
 app.post('/enroll', function(req, res) {
     debugger
     console.log(req.body);
-    res.status(200).send({ "message": "data  received" });
+    //res.status(200).send({ "message": "data  received" });
+    res.status(401).send({ "message": "data  received" }); // for error handling sample
 });
 
 app.listen(PORT, function() {

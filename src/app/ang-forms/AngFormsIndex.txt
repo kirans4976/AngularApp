@@ -11,6 +11,7 @@
 11.Form validation
 12.Submitting form data
 13.Express server to receive form data
+14:Error handling
 
 7.Tracking state & validity:
 1.The control has visited >> ng-toched(cliking or tabbing form)   >> ng-untoched

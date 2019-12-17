@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { PersonalData, ContactRequest } from '../models/contact-request';
+import {phoneNumberValidator} from '../validators/phone-validators';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,7 @@ export class ContactComponent implements OnInit {
 
 //form builder:
 constructor(private formBuilder: FormBuilder) {
-  this.contactForm = this.createFormGroupWithBuilderAndModel(formBuilder);
+  this.contactForm = this.createFormGroup();  //createFormGroupWithBuilderAndModel(formBuilder);
 }
 
   
@@ -28,8 +29,9 @@ requestTypes = ['Claim', 'Feedback', 'Help Request'];
   createFormGroup() {
     return new FormGroup({
       personalData: new FormGroup({
-        email: new FormControl(),
-        mobile: new FormControl(),
+        email: new FormControl('kirans4976@gm',[Validators.required,Validators.email]), // form validation
+        // mobile: new FormControl('',[Validators.required,phoneNumberValidator]),
+        mobile: new FormControl(''),
         country: new FormControl()
        }),
       requestType: new FormControl(),
@@ -55,7 +57,7 @@ requestTypes = ['Claim', 'Feedback', 'Help Request'];
   createFormGroupWithBuilderAndModel(formBuilder: FormBuilder) {
     debugger
     return formBuilder.group({
-      personalData: formBuilder.group(new PersonalData()),
+      personalData: formBuilder.group(new PersonalData()), //[Validators.required] not working
       requestType: '',
       text: ''
     });
@@ -78,5 +80,13 @@ requestTypes = ['Claim', 'Feedback', 'Help Request'];
 
     // Resets to provided model
     this.contactForm.reset({ personalData: new PersonalData(), requestType: '', text: '' });
+  }
+
+  get mobile() {
+    return this.contactForm.get('mobile');
+  }
+  
+  get email() {
+    return this.contactForm.get('email');
   }
 }

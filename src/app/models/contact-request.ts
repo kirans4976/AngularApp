@@ -5,7 +5,7 @@ export class ContactRequest {
   }
   
   export class PersonalData {
-    email: string = 'kirans'
+    email: string = ''
     mobile: string = ''
-    country: string = ''
+    country: string = 'uk'
   }

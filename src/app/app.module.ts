@@ -13,6 +13,7 @@ import {EmployeeServicesService} from './Services/employee-services.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AngFormsComponent } from './ang-forms/ang-forms.component';
 import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 // import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 // import { DepartmentContactComponent } from './department-contact/department-contact.component';
 // import { DepartmentDetailComponent } from './department-detail/department-detail.component';
@@ -24,7 +25,7 @@ import { ContactComponent } from './contact/contact.component';
   declarations: [
     AppComponent,
     routingComponents, // instead of  importing binding & directives components, we will bind routingComponents const
-    ComponentInteractionComponent, AngFormsComponent, ContactComponent
+    ComponentInteractionComponent, AngFormsComponent, ContactComponent, HomeComponent
   ],
   imports: [
     BrowserModule,

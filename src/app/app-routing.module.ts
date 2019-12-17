@@ -7,6 +7,9 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
+import { AngFormsComponent } from './ang-forms/ang-forms.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -14,7 +17,7 @@ import { DepartmentContactComponent } from './department-contact/department-cont
 Wild card route must be at last path because router will match from top */
 const routes: Routes = [
   //{path:'',component:DirectivesComponent},
-  {path:'',redirectTo:'/directives',pathMatch:'full'}, // pathMatch:prefix
+  {path:'',redirectTo:'/home',pathMatch:'full'}, // pathMatch:prefix
    { path:'directives',component:DirectivesComponent },
    /*if we change below route from departments to departments-list then it must be changes in all
    occurances, because this is absolute path , hence we will change to navigate routing */
@@ -27,7 +30,10 @@ const routes: Routes = [
       {path:'contact',component:DepartmentContactComponent},
   ]
    },
+   {path:'AngTDF',component:AngFormsComponent},
+   {path:'AngReactiveForms',component:ContactComponent},
   {path: 'bindings',component:BindingComponent},
+  {path:'home',component:HomeComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 
@@ -37,5 +43,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [DirectivesComponent,BindingComponent,PageNotFoundComponent
+export const routingComponents = [DirectivesComponent,BindingComponent,PageNotFoundComponent,AngFormsComponent
 ,DepartmentDetailComponent,DepartmentListComponent,DepartmentContactComponent,DepartmentOverviewComponent];

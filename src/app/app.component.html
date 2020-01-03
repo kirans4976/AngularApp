@@ -35,8 +35,13 @@
 
 <!--Routed views go here-->
 <router-outlet></router-outlet>
+<!-- [parentData] >> sending data to child component,  (childEvent) >> receiving data from the child component -->
 <app-component-interaction (childEvent)="message=$event" [parentData]=" 'Kiran' "></app-component-interaction>
 <h1>{{message}}</h1>
 <!-- ang tdf & reactive forms  moved to routing from home -->
 <!-- <app-ang-forms></app-ang-forms> -->  
 <!-- <app-contact></app-contact> -->
+
+
+<app-login></app-login> 
+ <!-- from auth module -->

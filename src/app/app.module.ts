@@ -20,7 +20,7 @@ import { HomeComponent } from './home/home.component';
 // import { DepartmentListComponent } from './department-list/department-list.component';
 //import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-
+import {AuthenticationModule} from '../authentication/authentication.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,11 +33,14 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule
+    // commented for lazy loading
+   // AuthenticationModule // impoorted authenticated module 
   ],
   providers: [EmployeeServicesService],
   /*AppModule, which looks into the app folders. You can see in the "app.module" file 
   that a bootstrap array which is basically a list of all the components analyzes
    the index.html file.*/
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

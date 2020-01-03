@@ -10,6 +10,7 @@ import { DepartmentContactComponent } from './department-contact/department-cont
 import { AngFormsComponent } from './ang-forms/ang-forms.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from '../authentication/login/login.component';
 
 
 
@@ -34,14 +35,21 @@ const routes: Routes = [
    {path:'AngReactiveForms',component:ContactComponent},
   {path: 'bindings',component:BindingComponent},
   {path:'home',component:HomeComponent},
-  {path:'**',component:PageNotFoundComponent}
+  {path:'**',component:PageNotFoundComponent}, // Wildcard routing for handling unmatched(routes not present) routes
+  { path: 'Auth', component: LoginComponent ,
+   children : [
+     { path: 'login', loadChildren: './authentication/authentication.module#AuthenticationModule'}]
+ }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
+//DBT: Routing components should be removed or added
 export class AppRoutingModule { }
 
+//Adding LoginComponent to below array
 export const routingComponents = [DirectivesComponent,BindingComponent,PageNotFoundComponent,AngFormsComponent
-,DepartmentDetailComponent,DepartmentListComponent,DepartmentContactComponent,DepartmentOverviewComponent];
+,DepartmentDetailComponent,DepartmentListComponent,DepartmentContactComponent,DepartmentOverviewComponent,LoginComponent];

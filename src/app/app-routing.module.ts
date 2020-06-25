@@ -11,6 +11,7 @@ import { AngFormsComponent } from './ang-forms/ang-forms.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from '../authentication/login/login.component';
+// import {AuthenticationModule} from  '../authentication/authentication.module';
 
 
 

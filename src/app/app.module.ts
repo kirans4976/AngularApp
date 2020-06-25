@@ -20,7 +20,7 @@ import { HomeComponent } from './home/home.component';
 // import { DepartmentListComponent } from './department-list/department-list.component';
 //import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-import {AuthenticationModule} from '../authentication/authentication.module';
+//import {AuthenticationModule} from '../authentication/authentication.module';
 @NgModule({
   declarations: [
     AppComponent,

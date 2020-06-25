@@ -1,0 +1,32 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" > 
+    <!-- novalidate -->
+    <div formGroupName="personalData" >
+            <!-- novalidate -->
+      <input formControlName="email" /> 
+      <!-- Reactive forms validation for showing error msgs to be done -->
+      <!-- <input formControlName="mobile" /> -->
+      <!-- Mobile: <input formControlName="mobile" name=phone #mobile mobile  ="ngModel"/> -->
+  <!-- <span *ngIf="(mobile.dirty || mobile.touched) && mobile.invalid && mobile.errors.required">
+    Mobile is required.
+  </span>-->
+   
+  <br>
+      <select formControlName="country">
+        <option *ngFor="let country of countries" [value]="country"
+          >{{country}}</option
+        >
+      </select>
+    </div>
+    <select formControlName="requestType">
+      <option *ngFor="let requestType of requestTypes" [value]="requestType"
+        >{{requestType}}</option
+      >
+    </select>
+    <input formControlName="text" />
+    <button type="submit" [disabled]="!contactForm.valid">Save</button>
+
+    <!-- contactForm.pristine -->
+    <button type="reset" (click)="revert()" [disabled]="contactForm.pristine">
+      Revert
+    </button>
+  </form>

@@ -9,6 +9,7 @@ import { Component, OnInit, Input, Output ,EventEmitter} from '@angular/core';
 export class ComponentInteractionComponent implements OnInit {
 
   constructor() { }
+  //@Input for receiving parent data from parent component
   @Input() public parentData;
   // another syntax
   // @Input('parentData') public name; 
@@ -16,6 +17,7 @@ export class ComponentInteractionComponent implements OnInit {
   /* As we have child componet decorator in parent componet we can easlity transfer the data 
   but we didnt have parent  decorators in child componet for this we have to using events  */
 
+  // @output for sending data from child to parent component
   @Output() public childEvent = new EventEmitter();
   ngOnInit() {
   }

@@ -1,0 +1,15 @@
+
+Angular Installation
+
+install node js
+verify installation by node -v, npm -v
+install angular/cli >> ng i -g @anguar/cli
+
+global cli version may not nbe matched with local, eventhough projec can work from local >> global > local version
+install angular/cli version matching with package.json >> npm install >> depends upon on package.json file
+install npm extension in vscode if npm is not recognized
+npm install --save @angular/cli@1.6.4
+
+tose:
+prefix matche
+navigation routing
